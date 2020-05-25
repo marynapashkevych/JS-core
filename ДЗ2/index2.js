@@ -69,7 +69,7 @@ if (isAdult >= 0 && isAdult >=10 || isAdult >=18) {
     console.log("Error");
 }*/
 
-/*Task 6 - не получилось использовать функцию parceFloat
+/*Task 6 
 let quest = confirm("Введите значения сторон треугольника для вычисления его площади по формуле Герона");
 let side1 = prompt("сторона a", "");
 let side2 = prompt("сторона b", "");
@@ -78,13 +78,16 @@ let p = (+side1 + +side2 + +side3) / 2;
 let ps = p * ((p - side1) * (p - side2) * (p - side3));
 let square = ps ** (1/2);
 let dec = square.toFixed(3);
-console.log(dec);
 if (side1 < 0 || side2 < 0 || side3 < 0) {
+    console.log("Incorrect data");
+} else if (side1 === " " || side2 === " " || side3 === " ") {
+    console.log("Incorrect data");
+} else if (isNaN(side1) == true || isNaN(side2) == true || isNaN(side3) == true) {
     console.log("Incorrect data");
 } else if (side3 ** 2 == (side1 ** 2) +  (side2 ** 2)) {
     console.log("Треугольник является прямоугольным");
 } else {
-    console.log("Треугольник не является прямоугольным");
+    console.log(dec);
 }*/
 
 
