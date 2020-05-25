@@ -80,9 +80,7 @@ let square = ps ** (1/2);
 let dec = square.toFixed(3);
 if (side1 < 0 || side2 < 0 || side3 < 0) {
     console.log("Incorrect data");
-} else if (side1 === " " || side2 === " " || side3 === " ") {
-    console.log("Incorrect data");
-} else if (isNaN(side1) == true || isNaN(side2) == true || isNaN(side3) == true) {
+} else if (side1.trim || side2.trim || side3.trim) {
     console.log("Incorrect data");
 } else if (side3 ** 2 == (side1 ** 2) +  (side2 ** 2)) {
     console.log("Треугольник является прямоугольным");
@@ -125,7 +123,7 @@ switch (new Date().getHours()) {
     case 22:
         console.log("Доброго вечора");
         break;
-}
+}*/
 
 /*let d = new Date();
 console.log(d.getHours());
