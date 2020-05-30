@@ -87,14 +87,11 @@ function lastElem(a, i) {
     let arr = [3, 4, 10, -5];
     arr = a;
     if (i === undefined) {
-        i = 3;
-    }
-    if (i > 4) {
-        console.log(arr);
-    }
-    return arr.slice(i);
+        return arr[arr.length -1];
+      }
+    return arr.slice(-i);
 }
-console.log(lastElem([3, 4, 10, -5], 8)); */
+console.log(lastElem([3, 4, 10, -5, 9, 8])); */
 
 /*Task 8
 function string() {
