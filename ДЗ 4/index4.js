@@ -38,35 +38,34 @@ function checkAge () {
     
 
    
-  /* Task 4
+  /* Task 4 
   function showUser(id) {
     if (id < 0) {
-        throw new Error ("Error: ID must not be negative: " + id);
+        throw new Error ("ID must not be negative: " +id);
     } 
-        return {id, id};
+        return { id, id };
   }
 
  function showUsers(ids) {
-   let emptyArr = [];
+   let result = [];
    
-   emptyArr.forEach(function (id) {
+   ids.forEach(function (id) {
         try {
-        let result = showUser(id);
-        console.log(result);
+        let person = showUser(id);
+        result.push(person);
     } catch(exception) {
-            console.log(exception.name);
             console.log(exception.message);
         }  
     });
-    result = emptyArr;
-    return result = {ids, ids};
+    return result;
  } 
- console.log(showUsers([7, -12, 44, 22])) */
+ console.log(showUsers([7, 12, 44, 22]) ) */
 
  /* Task 3
  class MonthException {
      constructor(message) {
-         this.name = message;
+         this.message = message
+         this.name = "MonthException";
      }
      showMessage(){
          console.log(this.name);
@@ -91,6 +90,30 @@ function checkAge () {
 } catch (exception) {
     monthexception.showMessage();
 } */
+/*Task 3.1
+class MonthException {
+    constructor(message) {
+        this.message = message
+        this.name = "MonthException";
+    }
+}
+
+function showMonthName(month) {
+    month = month - 1;
+    let month = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"];
+    if (month[month] !== undefined) {
+        return month[month];
+    } else {
+        throw new MonthException ("Incorrect month number")
+    }
+}
  
- 
+try {
+    let myMonth = 14;
+    let monthName = showMonthName(myMonth);
+    console.log(monthName);
+} catch(e) {
+    monthName = "unknown";
+    console.error(e.name, e.message);
+}*/
  
