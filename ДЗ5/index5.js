@@ -17,50 +17,49 @@ let mentor = {
 console.log(propsCount(mentor))*/
 
 
-/* Универсальный вариант
+/* Универсальный вариант*/
 
 
-function propsCount(currentObject) {
+// function propsCount(currentObject) {
 
-    return Object.keys(mentor).length;
-}
+//     return Object.keys(currentObject).length;
+// }
 
-let mentor = { 
-    course: "JS fundamental", 
-    duration: 3,
-    direction: "web-development",
-    name: "Nick"
-}
+// let mentor = { 
+//     course: "JS fundamental", 
+//     duration: 3,
+//     direction: "web-development",
+//     name: "Nick"
+// }
 
-console.log(propsCount(mentor))*/
+// console.log(propsCount(mentor))
 
-/*Task 2
+/*Task 2*/
 
-let prices = {
-    banana: 100,
-    orange: 200,
-    apples: 30,
-    mango: 40,
-    cherry: 50
+// let prices = {
+//     banana: 100,
+//     orange: 200,
+//     apples: 30,
+//     mango: 40,
+//     cherry: 50
     
-}   
-    function showProps(obj) {
-        arrObj = [];
-        arrProp = [];
-        for (let key in obj) {
-            arrObj.push(obj[key]);
-        }
-        for (let key in obj) {
-            arrProp.push( key );
-        }
+// }   
+//     function showProps(obj) {
+//         arrObj = [];
+//         arrProp = [];
+//         for (let key in obj) {
+//             arrObj.push(obj[key]);
+//         }
+//         for (let key in obj) {
+//             arrProp.push( key );
+//         }
 
-        console.log(arrObj);
-        console.log(arrProp);
+//         console.log(arrObj);
+//         console.log(arrProp);
         
 
-    } 
-showProps(prices) */
-
+//     } 
+// showProps(prices) 
 
 
 /* Task 3
@@ -96,7 +95,7 @@ console.log("Current course: " + stud1.showCourse()); //Current course: 4
 
 */
 
-/* Task 4
+/* Task 5
 
 class Worker {
     #experience = 1.2;
@@ -171,53 +170,58 @@ console.log(workers[2].fullName + ": " + (workers[2].dayRate * workers[2].workin
 
 */
 
-/* Task 4 (не сделала)
-class GeometricFigure {
-    getArea() {
-        return 0;
-    }
-    toString() {
-     return Object.getPrototypeOf(this).constructor.name;
-    }
-}
+//  Task 4 
+// class GeometricFigure {
+//     getArea() {
+//         return 0;
+//     }
+//     toString() {
+//      return Object.getPrototypeOf(this).constructor.name;
+//     }
+// }
 
-class Triangle extends GeometricFigure {
-    constructor (side, height) {
-        this.side = side;
-        this.height = height;
-    }
-    getArea() {
-        console.log(0.5 * this.side * this.height);
-    }
-}
-class Square extends GeometricFigure {
-    constructor (squareSide) {
-        this.squareSide = squareSide;
-    }
-    getArea() {
-        console.log(Math.pow(this.squareSide, 2));
-    }
-}
-class Circle extends GeometricFigure {
-    constructor (radius) {
-        this.radius = radius;
-    }
-    getArea() {
-        console.log(Math.PI * Math.pow(this.radius, 2));
-    }
-}
+// class Triangle extends GeometricFigure {
+//     constructor (b, h) {
+//         super();
+//         this.base = b;
+//         this.height = h;
+//     }
+//     getArea() {
+//       return  this.base * this.height / 2;
+//     }
+// }
+// class Square extends GeometricFigure {
+//     constructor (a) {
+//         super();
+//         this.side = a;
+//     }
+//     getArea() {
+//        return this.side ** 2;
+//     }
+// }
+// class Circle extends GeometricFigure {
+//     constructor (r) {
+//         super();
+//         this.radius = r;
+//     }
+//     getArea() {
+//         return Math.PI * this.radius ** 2;
+//     }
+// }
 
-function handleFigures(figures) {
-    let figures = [];
-    if (figures instanceof GeometricFigure) {
-        console.log(figures.toString());
-        console.log(figures.getArea())
-    }
-    else if ()
-    const figures = ;
+// function handleFigures(figures) {
+//     return figures.reduce(function(sum, figure) {
+//         if (figure instanceof GeometricFigure) {
+//             console.log("Geometric figure: " + figure.toString() + " - area: " + figure.getArea());
+//             return sum + figure.getArea()
+//         }
+//         throw Error('Bad argument figure.');
+//     }, 0);
+// }
+    
+//     const figures = [new Triangle(4, 5), new Square(7), new Circle(5)];
 
-    return figures.toString(), figures.getArea();
+//     console.log(handleFigures(figures));
 
 
     
-}*/
