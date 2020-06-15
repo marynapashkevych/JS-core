@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- Task 1 -->
+
+    <!-- <script>
+        let newWin = window.open("about:blank", "hello", "width=300,height=300");
+        setTimeout (function() { newWin.resizeTo(500,500) }, 2000);
+        setTimeout (function() { newWin.moveTo(200,200) }, 4000);
+        setTimeout (function () { newWin.close() }, 6000);
+    </script> -->
+
+
+    <!-- Task 2 -->
+
+    <!-- <p id = "text">I learning JavaScript events!</p>
+        <div>
+            <button id="myBtn">Change style!</button>
+        </div>
+
+    <script>
+        
+        function changeCSS() {
+            document.getElementById("text").style.color = "orange";
+            document.getElementById("text").style.fontSize = "20px";
+            document.getElementById("text").style.fontFamily = "Comic Sans MS";
+        }
+        
+        myBtn.addEventListener("click", changeCSS)
+        
+    </script>  -->
+
+
+    <!-- Task 3 -->
+
+    <!-- <button id="blue">Click to make the page blue</button>
+    <button id="pink">Double click to make the page pink</button>
+    <button id="brown">Click and hold to make the page brown</button>
+    <a href="" id="yellow">Hover over to make page yellow</a>
+
+    <script>
+
+        function clickBlue () {
+            document.querySelector("body").style.backgroundColor = "blue";
+        };
+        blue.addEventListener("click", clickBlue);
+
+        function dbclickPink () {
+            document.querySelector("body").style.backgroundColor = "pink";
+        };
+        pink.addEventListener("dblclick", dbclickPink);
+
+        function bcgBrown () {
+            
+            document.querySelector("body").style.backgroundColor = "brown";
+        };
+
+        function bcgWhite () {
+            document.querySelector("body").style.backgroundColor = "white";
+        };
+        brown.addEventListener("mousedown", bcgBrown);
+        brown.addEventListener("mouseup", bcgWhite);
+
+        function mouseEnter () {
+            document.querySelector("body").style.backgroundColor = "yellow";
+        };
+        function mouseLeave () {
+            document.querySelector("body").style.backgroundColor = "white";
+        };
+        yellow.addEventListener("mouseenter", mouseEnter);
+        yellow.addEventListener("mouseleave", mouseLeave);
+
+    </script> -->
+
+
+    <!-- Task 4 -->
+
+    <!-- <select name="name" id="selectvalue">
+        <option">Peter</option>
+        <option>Alise</option>
+        <option>John</option>
+        <option>Alex</option>
+        <option>Iren</option>
+    </select>
+    <button onclick="removeName()">Choose and Delete</button>
+
+    <script>
+        function removeName() {
+            let selectvalue = document.getElementById("selectvalue");
+            selectvalue.remove(selectvalue.selectedIndex)
+        }
+        myBtn.addEventListener("click", removeName)
+    </script> -->
+
+
+    <!-- Task 5 -->
+    
+    <!-- <button id="myBtn">Live button</button>
+    
+
+    <script>
+        document.getElementById("myBtn").addEventListener("mouseenter", mouseEnter);
+        document.getElementById("myBtn").addEventListener("mouseleave", mouseLeave);
+        document.getElementById("myBtn").addEventListener("click", mouseclick);
+
+        function mouseEnter() {
+           let text = document.createElement("p");
+           text.innerHTML = "Mouse on me";
+           document.body.appendChild(text);
+        }
+
+        function mouseLeave() {
+            let text1 = document.createElement("p");
+            text1.innerHTML = "Mouse is not on me";
+            document.body.appendChild(text1);
+        }
+
+        function mouseclick() {
+            let text2 = document.createElement("p");
+            text2.innerHTML = "I was pressed!";
+            document.body.appendChild(text2);
+        }
+    </script> -->
+
+
+    <!-- Task 6 -->
+
+    <!-- <p id="demo"></p>
+
+    <script>
+        window.addEventListener("resize", function() {
+            let w = window.innerWidth;
+            let h = window.innerHeight;
+            let x = document.getElementById("demo");
+            x.innerHTML = "Width: " + w + " Heigth: " + h;
+       }, false);
+    </script> -->
+
+
+    <!-- Task 7 -->
+
+    <!-- <select name="country" id="country" onchange="myFunc()">
+        <option value="Germany">Germany</option>
+        <option value="USA">USA</option>
+        <option value="Ukraine">Ukraine</option>
+    </select>
+
+    <select name="city" id="city" onchange="myFunc()"> </select>
+        
+
+        <p id="demo"></p>
+
+        <script>
+            let cities = {
+                Germany: ["Berlin", "Augsburg", "Munich", "Dresden"],
+                USA: ["New York", "Washington", "Boston", "Chikago"],
+                Ukraine: ["Kharkiv", "Lviv", "Kiev", "Odessa"]
+            };
+
+            let country = document.getElementById("country");
+            let city = document.querySelector("#city");
+            window.onload = selectCountry;
+            country.onchange = selectCountry;
+
+            function selectCountry () {
+                city.innerHTML = "";
+                let c = this.value || "Germany", o;
+                for(let i = 0; i < cities[c].length; i++) {
+                    o = new Option(cities[c][i],i,false,false);
+                    city.add(o);
+                };
+            }
+
+            function myFunc() {
+                let x = document.getElementById("country").value;
+                
+                document.getElementById("demo").innerHTML = x;
+            }
+        </script>
+
+    </select> -->
+
+
+
+    
+</body>
+</html>
