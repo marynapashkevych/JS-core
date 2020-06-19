@@ -176,18 +176,58 @@
                     city.add(o);
                 };
             }
-
+            let parag = document.querySelector("p");
             function myFunc() {
-                let x = document.getElementById("country").value;
                 
-                document.getElementById("demo").innerHTML = x;
+                parag.innerHTML = "";
+                parag.innerHTML = country.options[country.selectedIndex].text + ', ' + city.options[city.selectedIndex].text;
             }
-        </script>
+        </script> -->
 
-    </select> -->
+    
+        <!-- 2 var -->
 
 
+        <!-- <select name="country" id="country">
+            <option value="ger">Germany</option>
+            <option value="usa">USA</option>
+            <option value="ukr">Ukraine</option>
+        </select>
 
+        <select name="cities" id="cities"> </select>
+        <p></p>
+
+        <script>
+            const cityArr = {
+                "ger": ["Berlin", "Augsburg", "Munich", "Dresden"],
+                "usa": ["New York", "Washington", "Boston", "Chikago"],
+                "ukr": ["Kharkiv", "Lviv", "Kiev", "Odessa"]
+            }
+
+            let prime_select = document.getElementById("country");
+            prime_select.addEventListener("change", func);
+            prime_select.addEventListener("change", toParagraph);
+
+            let city_select = document.getElementById("cities");
+            city_select.addEventListener("change", toParagraph);
+
+            function func() {
+                city_select.innerHTML = "";
+                let selected_country = prime_select.value;
+                for (let i = 0; i < cityArr[selected_country].length; i++) {
+                    let new_option = document.createElement("option");
+                    new_option.innerHTML = cityArr[selected_country][i];
+                    city_select.appendChild(new_option);
+                }
+            }
+
+            let parag = document.querySelector("p");
+            function toParagraph() {
+                
+                parag.innerHTML = "";
+                parag.innerHTML = prime_select.options[prime_select.selectedIndex].text + ', ' + city_select.options[city_select.selectedIndex].text;
+            }
+        </script> -->
     
 </body>
 </html>
