@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- Task 1 -->
+
+    <!-- <script>
+        let arr = ["Tom", "Sam", "Ray", "Bob"];
+        let [first, second, ,...rest] = arr;
+        console.log(first);
+        console.log(second);
+        console.log(rest);
+       </script> -->
+
+
+       <!-- Task 2 -->
+
+       <!-- <script>
+        let data = {
+        names: ["Sam", "Tom", "Ray", "Bob"],
+        ages: [20, 24, 22, 26],
+        };
+
+        let {names: [name1, name2, name3, name4], ages: [age1, age2, age3, age4]} = data;
+        console.log(name2); // "Tom"
+        console.log(age2); // 24
+        console.log(name4); // "Bob"
+        console.log(age4); // 26
+
+       </script> -->
+
+
+       <!-- Task 3 -->
+
+       <!-- <script>
+
+            function mul(...theArgs) {
+                   let isNumber;
+                   let num = 1;
+               for (let elem of theArgs) {
+                   if(typeof elem === "number") {
+                    isNumber = true;
+                    num*=elem;
+                   } 
+               }
+               return isNumber ? num : 0;
+           }
+           console.log(mul(null, "str", false, true)); 
+    
+            
+       </script> -->
+
+
+       <!-- Task 4 -->
+
+      <!-- <script>
+          let server = {
+            data: 0,
+            convertToString: function (callback) {
+                callback(() => {return server.data + ""});
+            }
+        };
+        let client = {
+            server: server,
+            result: "",
+            calc: function (data) {
+                this.server.data = data;
+                this.server.convertToString(this.notification());
+            },
+            notification: function () {
+                return callback => client.result = callback();
+            }
+        };
+        client.calc(123);
+        console.log(client.result); // "123"
+        console.log(typeof client.result); // "string"
+
+      </script> -->
+
+
+      <!-- Task 5 -->
+
+      <!-- <script>
+         function mapBuilder (keysArray, valuesArray) {
+             let result = new Map();
+             for(a of keysArray) {
+                result.set(a, valuesArray[a -1]);
+             }
+            return result
+             }
+            
+            let keys = [1, 2, 3, 4];
+            let values = ["div", "span", "b", "i"];
+            let map = mapBuilder(keys, values);
+            console.log(map.size);
+            console.log(map);
+            console.log(map.get(2));
+      </script> -->
+
+</body>
+</html>
