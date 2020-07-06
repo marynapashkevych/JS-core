@@ -4,19 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-    <form action="">
-        <label for="text">Доходы</label>
-        <input type="text" id="income" value="">
-        <label for="text">Затраты</label>
-        <input type="text" id="consumption" value="">
-        <input type="button" value="Вычислить чистую прибыль" onclick="formula ()">    
+    <form class="formula-form">
+        <div class="input-style">
+            <label for="text">Доходы</label>
+            <input type="text" id="income" value="">
+        </div>
+        <div class="input-style">
+            <label for="text">Затраты</label>
+            <input type="text" id="consumption" value="">
+        </div>
+        <div>
+            <input class="btn-style" type="button" value="Вычислить чистую прибыль" onclick="formula ()"> 
+        </div>
+        <div class="input-style">
+            <label for="text">Введите сегодняшнюю дату</label>
+            <input type="text" id="data" value="6.07.2020" class="input-data">
+        </div>
+        <div>
+            <input type="button" value="Записать данные" class="writeValue btn-style"> 
+        </div>
+        <div">
+            <input type="button" value="Clear" class="clear-ls btn-style red">  
+        </div>
+       
     </form>
-    <div id="result"></div>
-    <div id="month-result"></div>
+        
+        <ul class="ul"></ul>
+        <div id="month-result"></div>
     
     <script>
+        const ul = document.querySelector('ul.ul');
+        const writeValue = document.querySelector('input.writeValue');
+        const data = JSON.parse(localStorage.getItem('income'))
+
+        let dataObj = localStorage.getItem('income') ? JSON.parse(localStorage.getItem('income')) : [{}];
+
+
+        if(localStorage.getItem('income')) {
+            JSON.parse(localStorage.getItem('income'));
+        } else {
+             dataObj = [{
+            date: "5.07.2020",
+            result: 0
+        }];
+        }
+        
+        
+        const liMaker = text => {
+            const li = document.createElement('li');
+            li.textContent = text;
+            ul.appendChild(li);
+        }
     
         function formula () {
             let income = parseInt(document.getElementById('income').value);
@@ -25,22 +66,38 @@
             if(isNaN(income)) income = 0;
             if(isNaN(consumption)) consumption = 0;
 
-            let result = income - consumption;
-            
-            let d = new Date();
-            let day = d.getDate();
-            let month = d.getMonth() + 1;
-            let year = d.getFullYear();
-            let fullDate = day + "." + month + "." + year;
-            document.getElementById('result').innerHTML = (fullDate + " чистая прибыль равна " + result + " грн.");
-            localStorage.setItem('fullDate', JSON.stringify(result));
-            let date = localStorage.getItem('fullDate');
-            let newValue = parseInt(date);
-            document.getElementById('month-result').innerHTML = (newValue + result);
-        }
+            let subtraction = income - consumption;
 
-        
-        
+            return subtraction;
+        };
+
+        writeValue.addEventListener('click', function(){
+            let inputResult = formula ();
+            let inputData = document.querySelector('input.input-data').value;
+            let newData = {
+                date: inputData, 
+                result: inputResult
+            }
+            dataObj.push(newData);
+            localStorage.setItem('income', JSON.stringify(dataObj));
+            liMaker(JSON.stringify(newData));
+
+        });
+
+       
+            const sum = dataObj.reduce((a,b) => a + b.result, 0);
+
+        document.getElementById('month-result').innerHTML = ("Прибыль за месяц: " + sum);
+
+        const clearLs = document.querySelector("input.clear-ls");
+
+        clearLs.addEventListener('click', function() {
+            localStorage.removeItem('income');
+//             while (ul.firstChild) {
+//                 ul.removeChild(ul.firstChild)
+//   }
+        });
+
     </script>
 </body>
 </html>

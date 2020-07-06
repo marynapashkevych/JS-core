@@ -179,6 +179,22 @@ body {
 @media screen and (max-width: 290px) {
     .weekdays th, .newTr td {width: 12.2%;}
 }
+.formula {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    background-color: #9f7f5d;
+}
+.formula a{
+    text-decoration: none;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 800;
+}
+.formula a:hover {
+    color: black;
+}
 .form-wrapper {
     display: flex;
     justify-content: space-around;
@@ -222,13 +238,39 @@ body {
     transition: background-color 0.5s linear, color 0.2s ease;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.82);
 }
+.clear {
+    margin-top: 10px;
+}
 .registration {
     margin-top: 10px;
     background: #9f7f5d;
     width: 390px;
-    height: 350px;
+    height: 470px;
     padding: 20px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.82);
+}
+.formula-form {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+}
+.input-style {
+    font-size: 20px;
+    font-weight: 600;
+}
+.btn-style {
+    border: none;
+    margin-top: 10px;
+    padding: 10px 10px;
+    width: 200px;
+    border-radius: 3px;
+    background: #9f7f5d;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.82);
+    transition: 0.2s;
+}
+.red {
+    background: red;
 }
 iframe {
     margin-top: 30px;
