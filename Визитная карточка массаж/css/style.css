@@ -1,0 +1,171 @@
+p {
+    line-height: 28px;
+    margin-bottom: 25px;
+}
+#mainwrap {
+    background: url(../img/essential-oil.png) no-repeat center;
+    padding-top: 260px;
+    padding-bottom: 285px;
+    background-position: center center;
+    min-width: 500px;
+    width: 100%;
+    background-size: 100%;
+}
+.portrait {
+    display: block;
+    width: 625px;
+    height: 557px;
+    background-image: url(../img/mom.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+.background {
+    background-color: #e8edf3;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-position: center center;
+    min-width: 500px;
+    width: 100%;
+    background-size: 100%;
+}
+#footerwrap {
+    background: url(../img/spa-bg.png) no-repeat center;
+    padding-top: 260px;
+    padding-bottom: 285px;
+    background-position: center center;
+    min-width: 500px;
+    width: 100%;
+    background-size: 100%;
+}
+.btn {
+   text-transform: uppercase;
+   width: 300px;
+}
+.footer {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-position: center center;
+    min-width: 500px;
+    width: 100%;
+    background-size: 100%;
+}
+.footer-flex {
+    display: flex;
+}
+.contacts {
+    color: white;
+    margin-right: 60px;
+}
+.contacts p {
+    margin-bottom: 49px;
+}
+.info-link {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 0.8px;
+}
+.info-link-mail {
+    margin-bottom: 20px;
+}
+.address {
+    color: white;
+    margin-right: 80px;
+}
+.address p {
+    margin-bottom: 49px;
+}
+.img {
+    background-image: url(../img/woman-oil.jpg);
+    background-repeat: no-repeat;
+	background-size: cover;
+    background-position: center center;
+    padding-top: 260px;
+    padding-bottom: 285px; 
+    width: 100%;
+    min-width: 500px;
+}
+.img a {
+    color: transparent;
+}
+.img-oil {
+    background-image: url(../img/bg.png);
+    padding-top: 200px;
+    padding-bottom: 185px;
+    background-position: center;
+    min-width: 500px;
+    width: 100%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.img-massage {
+    background-image: url(../img/petals1.jpg);
+    padding-top: 220px;
+    padding-bottom: 205px;
+    background-position: center;
+    min-width: 500px;
+    width: 100%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.img-head {
+    background-image: url(../img/woman-massage.jpg);
+    background-repeat: no-repeat;
+	background-size: cover;
+    background-position: center center;
+    padding-top: 260px;
+    padding-bottom: 285px; 
+    width: 100%;
+    min-width: 500px;
+}
+.img-head a {
+    color: transparent;
+}
+.img-online {
+    background-image: url(../img/onlinepage.png);
+    padding-top: 220px;
+    padding-bottom: 205px;
+    background-position: center;
+    min-width: 500px;
+    width: 100%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.pulse a{
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    color:black;
+    background: #e1d6df;
+    border-radius: 50%;
+    animation: radial-pulse 1s infinite;
+}
+.pulse-btn {
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-end;
+  }
+   
+@keyframes radial-pulse {
+    0% {
+      box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.5);
+    }
+   
+    100% {
+      box-shadow: 0 0 0 40px rgba(0, 0, 0, 0);
+    }
+  }
